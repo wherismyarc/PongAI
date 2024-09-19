@@ -1,20 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
-
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] Transform Player;
-    [SerializeField] Transform Enemy;
-    void Awake() 
+    // Start is called before the first frame update
+    void Start()
     {
-        CreateGame();
+        
     }
 
-    void CreateGame() 
+    // Update is called once per frame
+    void Update()
     {
-        Instantiate(Player , transform.position , Quaternion.identity);
+        
     }
 }
