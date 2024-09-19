@@ -1,7 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+
 
 public class Ball : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class Ball : MonoBehaviour
     public Vector2 direction;
     private Rigidbody ballRb;
 
+    public static event Action<Vector3> OnCollision;
 
     void Awake()
     {
@@ -33,10 +35,11 @@ public class Ball : MonoBehaviour
     private void StartDirection()
     {
         // Create random X and Y positions and set direction to those positions
-        float randomX = Random.Range(randomMin, randomMax) * Random.Range(0, 2) == 0 ? -1 : 1;
-        float randomY = Random.Range(randomMin, randomMax) * Random.Range(0, 2) == 0 ? -1 : 1;
-
-        direction = new Vector2(randomX, randomY).normalized;
+        //float randomX = Random.Range(randomMin, randomMax) * Random.Range(0, 2) == 0 ? -1 : 1;
+        //float randomY = Random.Range(randomMin, randomMax) * Random.r(0, 2) == 0 ? -1 : 1;
+        
+        
+        //direction = new Vector2(randomX, randomY).normalized;
 
     }
 
