@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private Transform Player;
     [SerializeField] private Transform Enemy;
+    [SerializeField] private Transform Ball;
 
     void Awake() 
     {
@@ -34,6 +35,10 @@ public class GameManager : MonoBehaviour
         // Enemy Setup
         Instantiate(Enemy, -newPos, Quaternion.identity);
         // Enemy Setup
+
+
+        // Sphere Setup
+        Instantiate(Ball , Vector3.zero , Quaternion.identity);
     }
 
 }
