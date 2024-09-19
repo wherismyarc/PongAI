@@ -168,6 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 8410944191214309654, guid: 2e4be5c9a7b0b4a0dbccb45d76aa0e13, type: 3}
   Enemy: {fileID: 6064762353024022292, guid: 8597f13f1b178410d9eeb6938fc18e4e, type: 3}
+  Ball: {fileID: 1922303530525352227, guid: 29817316b254a40f794d9515a754d0c3, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
