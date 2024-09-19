@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     void SetWorld() 
     {
         // Player setup
-        Vector3 newPos = new Vector3(30, 0, 0);
+        Vector3 newPos = new Vector3(60, 0, 0);
         Instantiate(Player, newPos, Quaternion.identity);
         // Player setup
 
