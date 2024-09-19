@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    // CONSTANTS
     private const string VERTICAL_INPUT = "Vertical";
     private const int zAxis = 0;
     private const int xAxis = 0;
     private const int verticalBoundary = 25;
-    [SerializeField] private float speed = 15.0f;
+    // CONSTANTS
+    [SerializeField] private float speed = 20.0f;
 
 
 
