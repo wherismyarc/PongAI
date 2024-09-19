@@ -1,13 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Transform Player;
+    [SerializeField] private Transform Enemy;
+
+    void Awake() 
     {
-        
+        Player.position = Vector3.zero;
+    }
+    void Start() 
+    {
+        SetWorld();
     }
 
     // Update is called once per frame
@@ -15,4 +22,18 @@ public class GameManager : MonoBehaviour
     {
         
     }
+
+    void SetWorld() 
+    {
+        // Player setup
+        Vector3 newPos = new Vector3(30, 0, 0);
+        Instantiate(Player, newPos, Quaternion.identity);
+        // Player setup
+
+
+        // Enemy Setup
+        Instantiate(Enemy, -newPos, Quaternion.identity);
+        // Enemy Setup
+    }
+
 }
