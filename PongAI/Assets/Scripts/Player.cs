@@ -20,13 +20,20 @@ public class Player : MonoBehaviour
     }
     void Movement() 
     {
-        float verticalInput = Input.GetAxisRaw(VERTICAL_INPUT);
+        // Calculate movement and boundry
 
+        // Calculate vertical input
+        float verticalInput = Input.GetAxisRaw(VERTICAL_INPUT);
         Vector3 movement = new Vector3(xAxis, verticalInput * speed, zAxis) * Time.deltaTime;
         Vector3 newPosition = transform.position + movement;
-
+        
+        // Calculate boundry
         newPosition.y = Mathf.Clamp(newPosition.y , -verticalBoundary , verticalBoundary);
+
+        
         transform.position = newPosition;
+
+        // Calculate movement and boundry
 
         
     }

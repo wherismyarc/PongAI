@@ -18,12 +18,6 @@ public class GameManager : MonoBehaviour
         SetWorld();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void SetWorld() 
     {
         // Player setup
@@ -39,6 +33,7 @@ public class GameManager : MonoBehaviour
 
         // Sphere Setup
         Instantiate(Ball , Vector3.zero , Quaternion.identity);
+        // Sphere Setup
     }
 
 }
