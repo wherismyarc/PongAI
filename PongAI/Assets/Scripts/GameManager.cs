@@ -8,12 +8,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Transform Player;
     [SerializeField] private Transform Enemy;
     [SerializeField] private Transform Ball;
-
-    void Awake() 
-    {
-        Player.position = Vector3.zero;
-    }
-    void Start() 
+    void OnEnable() 
     {
         SetWorld();
     }

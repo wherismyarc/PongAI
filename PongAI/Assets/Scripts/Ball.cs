@@ -10,7 +10,6 @@ public class Ball : MonoBehaviour
     private float randomMin = 1.0f;
     private float randomMax = 5.0f;
     public Vector2 direction;
-
     private Rigidbody ballRb;
 
 
@@ -18,24 +17,22 @@ public class Ball : MonoBehaviour
     {
         ballRb = GetComponent<Rigidbody>();
     }
-    void Start()
+
+    void Start() 
     {
         StartDirection();
-
-
     }
 
     void FixedUpdate()
     {
-
-        MoveBall();
-        SetBoundary();
+        BallMovement();   
     }
 
 
 
     private void StartDirection()
     {
+        // Create random X and Y positions and set direction to those positions
         float randomX = Random.Range(randomMin, randomMax) * Random.Range(0, 2) == 0 ? -1 : 1;
         float randomY = Random.Range(randomMin, randomMax) * Random.Range(0, 2) == 0 ? -1 : 1;
 
@@ -43,15 +40,16 @@ public class Ball : MonoBehaviour
 
     }
 
-    private void MoveBall()
+    void BallMovement() 
     {
         ballRb.velocity = (Vector3)(direction * speed);
+        SetBoundary();
     }
+
+    
 
     private void SetBoundary()
     {
-
-
         if (transform.position.y > yBoundary)
         {
            direction.y = -Mathf.Abs(direction.y);
@@ -62,6 +60,8 @@ public class Ball : MonoBehaviour
         {
             direction.y = Mathf.Abs(direction.y);
         }
+
+       
     }
 
     private void OnCollisionEnter(Collision collision)

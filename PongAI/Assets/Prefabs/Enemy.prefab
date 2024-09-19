@@ -110,5 +110,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6155fc57775c04fbb81e6382e2d4ad72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ball: {fileID: 1922303530525352227, guid: 29817316b254a40f794d9515a754d0c3, type: 3}
-  speed: 5
+  Ball: {fileID: 1922303530525352227, guid: 29817316b254a40f794d9515a754d0c3, type: 3}
