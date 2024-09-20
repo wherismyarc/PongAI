@@ -1,10 +1,10 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 
-public class Ball : MonoBehaviour
+
+public class Balls : MonoBehaviour
 {
     private float speed = 25.0f;
     private float yBoundary = 25.0f;
@@ -13,7 +13,6 @@ public class Ball : MonoBehaviour
     public Vector2 direction;
     private Rigidbody ballRb;
 
-    public static event Action<Vector3> OnCollision;
 
     void Awake()
     {
@@ -35,11 +34,11 @@ public class Ball : MonoBehaviour
     private void StartDirection()
     {
         // Create random X and Y positions and set direction to those positions
-        //float randomX = Random.Range(randomMin, randomMax) * Random.Range(0, 2) == 0 ? -1 : 1;
-        //float randomY = Random.Range(randomMin, randomMax) * Random.r(0, 2) == 0 ? -1 : 1;
+        float randomX = Random.Range(randomMin, randomMax) * Random.Range(0, 2) == 0 ? -1 : 1;
+        float randomY = Random.Range(randomMin, randomMax) * Random.Range(0, 2) == 0 ? -1 : 1;
         
         
-        //direction = new Vector2(randomX, randomY).normalized;
+        direction = new Vector2(randomX, randomY).normalized;
 
     }
 
@@ -67,7 +66,8 @@ public class Ball : MonoBehaviour
        
     }
 
-    private void OnCollisionEnter(Collision collision)
+
+     private void OnCollisionEnter(Collision collision)
     {
         
         ContactPoint[] contactPoints = collision.contacts;
@@ -87,5 +87,4 @@ public class Ball : MonoBehaviour
 
     }
     
-
 }
